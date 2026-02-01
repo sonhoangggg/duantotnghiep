@@ -1,0 +1,858 @@
+@extends('layouts.client')
+
+@section('main-content')
+    @include('client.partials.sub-header')
+    <main>
+
+        <!-- section title area start -->
+        <section class="tp-section-title-area pt-95 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8">
+                        <div class="tp-section-title-wrapper-7">
+                            <span class="tp-section-title-pre-7">Blog Standard</span>
+                            <h3 class="tp-section-title-7">Insight and advice <br> From our Expert team.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section title area end -->
+
+
+        <!-- blog grid area start -->
+        <section class="tp-blog-grid-area pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-8">
+                        <div class="tp-blog-grid-wrapper">
+
+
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-grid" role="tabpanel"
+                                    aria-labelledby="nav-grid-tab" tabindex="0">
+                                    <!-- blog grid item wrapper -->
+                                    <div class="tp-blog-grid-item-wrapper">
+                                        <div class="row tp-gx-30">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tp-blog-grid-item p-relative mb-30">
+                                                    <div class="tp-blog-grid-thumb w-img fix mb-30">
+                                                        <a href="blog-details.html">
+                                                            <img src="{{asset('assets/client/assets/img/blog/grid/blog-grid-1.jpg')}}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="tp-blog-grid-content">
+                                                        <div class="tp-blog-grid-meta">
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17" viewBox="0 0 16 17"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 8.5C15 12.364 11.864 15.5 8 15.5C4.136 15.5 1 12.364 1 8.5C1 4.636 4.136 1.5 8 1.5C11.864 1.5 15 4.636 15 8.5Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.5972 10.7259L8.42715 9.43093C8.04915 9.20693 7.74115 8.66793 7.74115 8.22693V5.35693"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                24 April, 2023
+                                                            </span>
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.5289 11.881L12.8019 14.093C12.8719 14.674 12.2489 15.08 11.7519 14.779L8.81888 13.036C8.49688 13.036 8.18189 13.015 7.87389 12.973C8.39189 12.364 8.69988 11.594 8.69988 10.761C8.69988 8.77299 6.97788 7.16302 4.84988 7.16302C4.03788 7.16302 3.28888 7.394 2.66588 7.8C2.64488 7.625 2.63788 7.44999 2.63788 7.26799C2.63788 4.08299 5.40288 1.5 8.81888 1.5C12.2349 1.5 14.9999 4.08299 14.9999 7.26799C14.9999 9.15799 14.0269 10.831 12.5289 11.881Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M8.7 10.7611C8.7 11.5941 8.39201 12.3641 7.87401 12.9731C7.18101 13.8131 6.082 14.3521 4.85 14.3521L3.023 15.437C2.715 15.626 2.323 15.3671 2.365 15.0101L2.54 13.6311C1.602 12.9801 1 11.9371 1 10.7611C1 9.52905 1.658 8.44407 2.666 7.80007C3.289 7.39407 4.038 7.16309 4.85 7.16309C6.978 7.16309 8.7 8.77305 8.7 10.7611Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                Comments (0)
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="tp-blog-grid-title">
+                                                            <a href="blog-details.html">Hiring the Right Sales Team at
+                                                                the Right Time</a>
+                                                        </h3>
+                                                        <p>Cursus mattis sociis natoque penatibus et magnis
+                                                            montes,nascetur ridiculus.</p>
+
+                                                        <div class="tp-blog-grid-btn">
+                                                            <a href="blog-details.html" class="tp-link-btn-3">
+                                                                Read More
+                                                                <span>
+                                                                    <svg width="17" height="15"
+                                                                        viewBox="0 0 17 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M16 7.5L1 7.5" stroke="currentColor"
+                                                                            stroke-width="1.5" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tp-blog-grid-item p-relative mb-30">
+                                                    <div class="tp-blog-grid-thumb w-img fix mb-30">
+                                                        <a href="blog-details.html">
+                                                            <img src="{{asset('assets/client/assets/img/blog/grid/blog-grid-2.jpg')}}"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="tp-blog-grid-content">
+                                                        <div class="tp-blog-grid-meta">
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 8.5C15 12.364 11.864 15.5 8 15.5C4.136 15.5 1 12.364 1 8.5C1 4.636 4.136 1.5 8 1.5C11.864 1.5 15 4.636 15 8.5Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.5972 10.7259L8.42715 9.43093C8.04915 9.20693 7.74115 8.66793 7.74115 8.22693V5.35693"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                12 jun, 2023
+                                                            </span>
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.5289 11.881L12.8019 14.093C12.8719 14.674 12.2489 15.08 11.7519 14.779L8.81888 13.036C8.49688 13.036 8.18189 13.015 7.87389 12.973C8.39189 12.364 8.69988 11.594 8.69988 10.761C8.69988 8.77299 6.97788 7.16302 4.84988 7.16302C4.03788 7.16302 3.28888 7.394 2.66588 7.8C2.64488 7.625 2.63788 7.44999 2.63788 7.26799C2.63788 4.08299 5.40288 1.5 8.81888 1.5C12.2349 1.5 14.9999 4.08299 14.9999 7.26799C14.9999 9.15799 14.0269 10.831 12.5289 11.881Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M8.7 10.7611C8.7 11.5941 8.39201 12.3641 7.87401 12.9731C7.18101 13.8131 6.082 14.3521 4.85 14.3521L3.023 15.437C2.715 15.626 2.323 15.3671 2.365 15.0101L2.54 13.6311C1.602 12.9801 1 11.9371 1 10.7611C1 9.52905 1.658 8.44407 2.666 7.80007C3.289 7.39407 4.038 7.16309 4.85 7.16309C6.978 7.16309 8.7 8.77305 8.7 10.7611Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                Comments (2)
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="tp-blog-grid-title">
+                                                            <a href="blog-details.html">Fully Embrace the Return of 90s
+                                                                fashion</a>
+                                                        </h3>
+                                                        <p>Cursus mattis sociis natoque penatibus et magnis
+                                                            montes,nascetur ridiculus.</p>
+
+                                                        <div class="tp-blog-grid-btn">
+                                                            <a href="blog-details.html" class="tp-link-btn-3">
+                                                                Read More
+                                                                <span>
+                                                                    <svg width="17" height="15"
+                                                                        viewBox="0 0 17 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M16 7.5L1 7.5" stroke="currentColor"
+                                                                            stroke-width="1.5" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tp-blog-grid-item p-relative mb-30">
+                                                    <div class="tp-blog-grid-thumb w-img fix mb-30">
+                                                        <a href="blog-details.html">
+                                                            <img src="{{asset('assets/client/assets/img/blog/grid/blog-grid-3.jpg')}}"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="tp-blog-grid-content">
+                                                        <div class="tp-blog-grid-meta">
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 8.5C15 12.364 11.864 15.5 8 15.5C4.136 15.5 1 12.364 1 8.5C1 4.636 4.136 1.5 8 1.5C11.864 1.5 15 4.636 15 8.5Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.5972 10.7259L8.42715 9.43093C8.04915 9.20693 7.74115 8.66793 7.74115 8.22693V5.35693"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                12 jun, 2023
+                                                            </span>
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.5289 11.881L12.8019 14.093C12.8719 14.674 12.2489 15.08 11.7519 14.779L8.81888 13.036C8.49688 13.036 8.18189 13.015 7.87389 12.973C8.39189 12.364 8.69988 11.594 8.69988 10.761C8.69988 8.77299 6.97788 7.16302 4.84988 7.16302C4.03788 7.16302 3.28888 7.394 2.66588 7.8C2.64488 7.625 2.63788 7.44999 2.63788 7.26799C2.63788 4.08299 5.40288 1.5 8.81888 1.5C12.2349 1.5 14.9999 4.08299 14.9999 7.26799C14.9999 9.15799 14.0269 10.831 12.5289 11.881Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M8.7 10.7611C8.7 11.5941 8.39201 12.3641 7.87401 12.9731C7.18101 13.8131 6.082 14.3521 4.85 14.3521L3.023 15.437C2.715 15.626 2.323 15.3671 2.365 15.0101L2.54 13.6311C1.602 12.9801 1 11.9371 1 10.7611C1 9.52905 1.658 8.44407 2.666 7.80007C3.289 7.39407 4.038 7.16309 4.85 7.16309C6.978 7.16309 8.7 8.77305 8.7 10.7611Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                Comments (2)
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="tp-blog-grid-title">
+                                                            <a href="blog-details.html">Exploring the English
+                                                                Countryside</a>
+                                                        </h3>
+                                                        <p>Cursus mattis sociis natoque penatibus et magnis
+                                                            montes,nascetur ridiculus.</p>
+
+                                                        <div class="tp-blog-grid-btn">
+                                                            <a href="blog-details.html" class="tp-link-btn-3">
+                                                                Read More
+                                                                <span>
+                                                                    <svg width="17" height="15"
+                                                                        viewBox="0 0 17 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M16 7.5L1 7.5" stroke="currentColor"
+                                                                            stroke-width="1.5" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tp-blog-grid-item p-relative mb-30">
+                                                    <div class="tp-blog-grid-thumb w-img fix mb-30">
+                                                        <a href="blog-details.html">
+                                                            <img src="{{asset('assets/client/assets/img/blog/grid/blog-grid-4.jpg')}}"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="tp-blog-grid-content">
+                                                        <div class="tp-blog-grid-meta">
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 8.5C15 12.364 11.864 15.5 8 15.5C4.136 15.5 1 12.364 1 8.5C1 4.636 4.136 1.5 8 1.5C11.864 1.5 15 4.636 15 8.5Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.5972 10.7259L8.42715 9.43093C8.04915 9.20693 7.74115 8.66793 7.74115 8.22693V5.35693"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                12 jun, 2023
+                                                            </span>
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.5289 11.881L12.8019 14.093C12.8719 14.674 12.2489 15.08 11.7519 14.779L8.81888 13.036C8.49688 13.036 8.18189 13.015 7.87389 12.973C8.39189 12.364 8.69988 11.594 8.69988 10.761C8.69988 8.77299 6.97788 7.16302 4.84988 7.16302C4.03788 7.16302 3.28888 7.394 2.66588 7.8C2.64488 7.625 2.63788 7.44999 2.63788 7.26799C2.63788 4.08299 5.40288 1.5 8.81888 1.5C12.2349 1.5 14.9999 4.08299 14.9999 7.26799C14.9999 9.15799 14.0269 10.831 12.5289 11.881Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M8.7 10.7611C8.7 11.5941 8.39201 12.3641 7.87401 12.9731C7.18101 13.8131 6.082 14.3521 4.85 14.3521L3.023 15.437C2.715 15.626 2.323 15.3671 2.365 15.0101L2.54 13.6311C1.602 12.9801 1 11.9371 1 10.7611C1 9.52905 1.658 8.44407 2.666 7.80007C3.289 7.39407 4.038 7.16309 4.85 7.16309C6.978 7.16309 8.7 8.77305 8.7 10.7611Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                Comments (2)
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="tp-blog-grid-title">
+                                                            <a href="blog-details.html">Here’s the First Valentino’s New
+                                                                Makeup Collection</a>
+                                                        </h3>
+                                                        <p>Cursus mattis sociis natoque penatibus et magnis
+                                                            montes,nascetur ridiculus.</p>
+
+                                                        <div class="tp-blog-grid-btn">
+                                                            <a href="blog-details.html" class="tp-link-btn-3">
+                                                                Read More
+                                                                <span>
+                                                                    <svg width="17" height="15"
+                                                                        viewBox="0 0 17 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M16 7.5L1 7.5" stroke="currentColor"
+                                                                            stroke-width="1.5" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tp-blog-grid-item p-relative mb-30">
+                                                    <div class="tp-blog-grid-thumb w-img fix mb-30">
+                                                        <a href="blog-details.html">
+                                                            <img src="{{asset('assets/client/assets/img/blog/grid/blog-grid-5.jpg')}}"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="tp-blog-grid-content">
+                                                        <div class="tp-blog-grid-meta">
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 8.5C15 12.364 11.864 15.5 8 15.5C4.136 15.5 1 12.364 1 8.5C1 4.636 4.136 1.5 8 1.5C11.864 1.5 15 4.636 15 8.5Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.5972 10.7259L8.42715 9.43093C8.04915 9.20693 7.74115 8.66793 7.74115 8.22693V5.35693"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                12 jun, 2023
+                                                            </span>
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.5289 11.881L12.8019 14.093C12.8719 14.674 12.2489 15.08 11.7519 14.779L8.81888 13.036C8.49688 13.036 8.18189 13.015 7.87389 12.973C8.39189 12.364 8.69988 11.594 8.69988 10.761C8.69988 8.77299 6.97788 7.16302 4.84988 7.16302C4.03788 7.16302 3.28888 7.394 2.66588 7.8C2.64488 7.625 2.63788 7.44999 2.63788 7.26799C2.63788 4.08299 5.40288 1.5 8.81888 1.5C12.2349 1.5 14.9999 4.08299 14.9999 7.26799C14.9999 9.15799 14.0269 10.831 12.5289 11.881Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M8.7 10.7611C8.7 11.5941 8.39201 12.3641 7.87401 12.9731C7.18101 13.8131 6.082 14.3521 4.85 14.3521L3.023 15.437C2.715 15.626 2.323 15.3671 2.365 15.0101L2.54 13.6311C1.602 12.9801 1 11.9371 1 10.7611C1 9.52905 1.658 8.44407 2.666 7.80007C3.289 7.39407 4.038 7.16309 4.85 7.16309C6.978 7.16309 8.7 8.77305 8.7 10.7611Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                Comments (2)
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="tp-blog-grid-title">
+                                                            <a href="blog-details.html">Follow Your own Design process,
+                                                                whatever gets</a>
+                                                        </h3>
+                                                        <p>Cursus mattis sociis natoque penatibus et magnis
+                                                            montes,nascetur ridiculus.</p>
+
+                                                        <div class="tp-blog-grid-btn">
+                                                            <a href="blog-details.html" class="tp-link-btn-3">
+                                                                Read More
+                                                                <span>
+                                                                    <svg width="17" height="15"
+                                                                        viewBox="0 0 17 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M16 7.5L1 7.5" stroke="currentColor"
+                                                                            stroke-width="1.5" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tp-blog-grid-item p-relative mb-30">
+                                                    <div class="tp-blog-grid-thumb w-img fix mb-30">
+                                                        <a href="blog-details.html">
+                                                            <img src="{{asset('assets/client/assets/img/blog/grid/blog-grid-6.jpg')}}"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="tp-blog-grid-content">
+                                                        <div class="tp-blog-grid-meta">
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 8.5C15 12.364 11.864 15.5 8 15.5C4.136 15.5 1 12.364 1 8.5C1 4.636 4.136 1.5 8 1.5C11.864 1.5 15 4.636 15 8.5Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.5972 10.7259L8.42715 9.43093C8.04915 9.20693 7.74115 8.66793 7.74115 8.22693V5.35693"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                12 jun, 2023
+                                                            </span>
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.5289 11.881L12.8019 14.093C12.8719 14.674 12.2489 15.08 11.7519 14.779L8.81888 13.036C8.49688 13.036 8.18189 13.015 7.87389 12.973C8.39189 12.364 8.69988 11.594 8.69988 10.761C8.69988 8.77299 6.97788 7.16302 4.84988 7.16302C4.03788 7.16302 3.28888 7.394 2.66588 7.8C2.64488 7.625 2.63788 7.44999 2.63788 7.26799C2.63788 4.08299 5.40288 1.5 8.81888 1.5C12.2349 1.5 14.9999 4.08299 14.9999 7.26799C14.9999 9.15799 14.0269 10.831 12.5289 11.881Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M8.7 10.7611C8.7 11.5941 8.39201 12.3641 7.87401 12.9731C7.18101 13.8131 6.082 14.3521 4.85 14.3521L3.023 15.437C2.715 15.626 2.323 15.3671 2.365 15.0101L2.54 13.6311C1.602 12.9801 1 11.9371 1 10.7611C1 9.52905 1.658 8.44407 2.666 7.80007C3.289 7.39407 4.038 7.16309 4.85 7.16309C6.978 7.16309 8.7 8.77305 8.7 10.7611Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                Comments (2)
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="tp-blog-grid-title">
+                                                            <a href="blog-details.html">Freelancer Days 2022, What’s
+                                                                new?</a>
+                                                        </h3>
+                                                        <p>Cursus mattis sociis natoque penatibus et magnis
+                                                            montes,nascetur ridiculus.</p>
+
+                                                        <div class="tp-blog-grid-btn">
+                                                            <a href="blog-details.html" class="tp-link-btn-3">
+                                                                Read More
+                                                                <span>
+                                                                    <svg width="17" height="15"
+                                                                        viewBox="0 0 17 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M16 7.5L1 7.5" stroke="currentColor"
+                                                                            stroke-width="1.5" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tp-blog-grid-item p-relative mb-30">
+                                                    <div class="tp-blog-grid-thumb w-img fix mb-30">
+                                                        <a href="blog-details.html">
+                                                            <img src="{{asset('assets/client/assets/img/blog/grid/blog-grid-7.jpg')}}"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="tp-blog-grid-content">
+                                                        <div class="tp-blog-grid-meta">
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 8.5C15 12.364 11.864 15.5 8 15.5C4.136 15.5 1 12.364 1 8.5C1 4.636 4.136 1.5 8 1.5C11.864 1.5 15 4.636 15 8.5Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.5972 10.7259L8.42715 9.43093C8.04915 9.20693 7.74115 8.66793 7.74115 8.22693V5.35693"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                12 jun, 2023
+                                                            </span>
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.5289 11.881L12.8019 14.093C12.8719 14.674 12.2489 15.08 11.7519 14.779L8.81888 13.036C8.49688 13.036 8.18189 13.015 7.87389 12.973C8.39189 12.364 8.69988 11.594 8.69988 10.761C8.69988 8.77299 6.97788 7.16302 4.84988 7.16302C4.03788 7.16302 3.28888 7.394 2.66588 7.8C2.64488 7.625 2.63788 7.44999 2.63788 7.26799C2.63788 4.08299 5.40288 1.5 8.81888 1.5C12.2349 1.5 14.9999 4.08299 14.9999 7.26799C14.9999 9.15799 14.0269 10.831 12.5289 11.881Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M8.7 10.7611C8.7 11.5941 8.39201 12.3641 7.87401 12.9731C7.18101 13.8131 6.082 14.3521 4.85 14.3521L3.023 15.437C2.715 15.626 2.323 15.3671 2.365 15.0101L2.54 13.6311C1.602 12.9801 1 11.9371 1 10.7611C1 9.52905 1.658 8.44407 2.666 7.80007C3.289 7.39407 4.038 7.16309 4.85 7.16309C6.978 7.16309 8.7 8.77305 8.7 10.7611Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                Comments (2)
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="tp-blog-grid-title">
+                                                            <a href="blog-details.html">Hiring the Right Sales Team at
+                                                                the Right Time</a>
+                                                        </h3>
+                                                        <p>Cursus mattis sociis natoque penatibus et magnis
+                                                            montes,nascetur ridiculus.</p>
+
+                                                        <div class="tp-blog-grid-btn">
+                                                            <a href="blog-details.html" class="tp-link-btn-3">
+                                                                Read More
+                                                                <span>
+                                                                    <svg width="17" height="15"
+                                                                        viewBox="0 0 17 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M16 7.5L1 7.5" stroke="currentColor"
+                                                                            stroke-width="1.5" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tp-blog-grid-item p-relative mb-30">
+                                                    <div class="tp-blog-grid-thumb w-img fix mb-30">
+                                                        <a href="blog-details.html">
+                                                            <img src="{{asset('assets/client/assets/img/blog/grid/blog-grid-8.jpg')}}"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="tp-blog-grid-content">
+                                                        <div class="tp-blog-grid-meta">
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M15 8.5C15 12.364 11.864 15.5 8 15.5C4.136 15.5 1 12.364 1 8.5C1 4.636 4.136 1.5 8 1.5C11.864 1.5 15 4.636 15 8.5Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M10.5972 10.7259L8.42715 9.43093C8.04915 9.20693 7.74115 8.66793 7.74115 8.22693V5.35693"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                12 jun, 2023
+                                                            </span>
+                                                            <span>
+                                                                <span>
+                                                                    <svg width="16" height="17"
+                                                                        viewBox="0 0 16 17" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M12.5289 11.881L12.8019 14.093C12.8719 14.674 12.2489 15.08 11.7519 14.779L8.81888 13.036C8.49688 13.036 8.18189 13.015 7.87389 12.973C8.39189 12.364 8.69988 11.594 8.69988 10.761C8.69988 8.77299 6.97788 7.16302 4.84988 7.16302C4.03788 7.16302 3.28888 7.394 2.66588 7.8C2.64488 7.625 2.63788 7.44999 2.63788 7.26799C2.63788 4.08299 5.40288 1.5 8.81888 1.5C12.2349 1.5 14.9999 4.08299 14.9999 7.26799C14.9999 9.15799 14.0269 10.831 12.5289 11.881Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M8.7 10.7611C8.7 11.5941 8.39201 12.3641 7.87401 12.9731C7.18101 13.8131 6.082 14.3521 4.85 14.3521L3.023 15.437C2.715 15.626 2.323 15.3671 2.365 15.0101L2.54 13.6311C1.602 12.9801 1 11.9371 1 10.7611C1 9.52905 1.658 8.44407 2.666 7.80007C3.289 7.39407 4.038 7.16309 4.85 7.16309C6.978 7.16309 8.7 8.77305 8.7 10.7611Z"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                                Comments (2)
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="tp-blog-grid-title">
+                                                            <a href="blog-details.html">Quality Foods Requirments For
+                                                                Every Human Body’s</a>
+                                                        </h3>
+                                                        <p>Cursus mattis sociis natoque penatibus et magnis
+                                                            montes,nascetur ridiculus.</p>
+
+                                                        <div class="tp-blog-grid-btn">
+                                                            <a href="blog-details.html" class="tp-link-btn-3">
+                                                                Read More
+                                                                <span>
+                                                                    <svg width="17" height="15"
+                                                                        viewBox="0 0 17 15" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M16 7.5L1 7.5" stroke="currentColor"
+                                                                            stroke-width="1.5" stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244"
+                                                                            stroke="currentColor" stroke-width="1.5"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="tp-blog-pagination mt-30">
+                                            <div class="tp-pagination">
+                                                <nav>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="blog-grid.html"
+                                                                class="tp-pagination-prev prev page-numbers">
+                                                                <svg width="15" height="13" viewBox="0 0 15 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M1.00017 6.77879L14 6.77879"
+                                                                        stroke="currentColor" stroke-width="1.5"
+                                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M6.24316 11.9999L0.999899 6.77922L6.24316 1.55762"
+                                                                        stroke="currentColor" stroke-width="1.5"
+                                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="blog-grid.html">1</a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="current">2</span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="blog-grid.html">3</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="blog-grid.html" class="next page-numbers">
+                                                                <svg width="15" height="13" viewBox="0 0 15 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M13.9998 6.77883L1 6.77883"
+                                                                        stroke="currentColor" stroke-width="1.5"
+                                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                                    <path d="M8.75684 1.55767L14.0001 6.7784L8.75684 12"
+                                                                        stroke="currentColor" stroke-width="1.5"
+                                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4">
+                        <div class="tp-sidebar-wrapper tp-sidebar-ml--24">
+                            <div class="tp-sidebar-widget mb-35">
+                                <div class="tp-sidebar-search">
+                                    <form action="#">
+                                        <div class="tp-sidebar-search-input">
+                                            <input type="text" placeholder="Search...">
+                                            <button type="submit">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.11111 15.2222C12.0385 15.2222 15.2222 12.0385 15.2222 8.11111C15.2222 4.18375 12.0385 1 8.11111 1C4.18375 1 1 4.18375 1 8.11111C1 12.0385 4.18375 15.2222 8.11111 15.2222Z"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M16.9995 17L13.1328 13.1333" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- about -->
+                            <div class="tp-sidebar-widget mb-35">
+                                <h3 class="tp-sidebar-widget-title">About me</h3>
+                                <div class="tp-sidebar-widget-content">
+                                    <div class="tp-sidebar-about">
+                                        <div class="tp-sidebar-about-thumb mb-25">
+                                            <a href="#">
+                                                <img src="{{asset('assets/client/assets/img/users/user-11.jpg')}}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="tp-sidebar-about-content">
+                                            <h3 class="tp-sidebar-about-title">
+                                                <a href="#">Ravi O'Leigh</a>
+                                            </h3>
+                                            <span class="tp-sidebar-about-designation">Photographer & Blogger</span>
+                                            <p>Lorem ligula eget dolor. Aenean massa. Cum sociis que penatibus magnis
+                                                dis parturient</p>
+                                            <div class="tp-sidebar-about-signature">
+                                                <img src="{{asset('assets/client/assets/img/blog/signature/signature.png')}}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- about end -->
+
+                            <!-- latest post start -->
+                            <div class="tp-sidebar-widget mb-35">
+                                <h3 class="tp-sidebar-widget-title">Latest Posts</h3>
+                                <div class="tp-sidebar-widget-content">
+                                    <div class="tp-sidebar-blog-item-wrapper">
+                                        <div class="tp-sidebar-blog-item d-flex align-items-center">
+                                            <div class="tp-sidebar-blog-thumb">
+                                                <a href="blog-details.html">
+                                                    <img src="{{asset('assets/client/assets/img/blog/sidebar/blog-sidebar-1.jpg')}}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="tp-sidebar-blog-content">
+                                                <div class="tp-sidebar-blog-meta">
+                                                    <span>12 April, 2023</span>
+                                                </div>
+                                                <h3 class="tp-sidebar-blog-title">
+                                                    <a href="blog-details.html">Sweeten your summer Wardrobes</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="tp-sidebar-blog-item d-flex align-items-center">
+                                            <div class="tp-sidebar-blog-thumb">
+                                                <a href="blog-details.html">
+                                                    <img src="{{asset('assets/client/assets/img/blog/sidebar/blog-sidebar-2.jpg')}}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="tp-sidebar-blog-content">
+                                                <div class="tp-sidebar-blog-meta">
+                                                    <span>8 July, 2023</span>
+                                                </div>
+                                                <h3 class="tp-sidebar-blog-title">
+                                                    <a href="blog-details.html">Exploring the English Countryside</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="tp-sidebar-blog-item d-flex align-items-center">
+                                            <div class="tp-sidebar-blog-thumb">
+                                                <a href="blog-details.html">
+                                                    <img src="{{asset('assets/client/assets/img/blog/sidebar/blog-sidebar-3.jpg')}}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="tp-sidebar-blog-content">
+                                                <div class="tp-sidebar-blog-meta">
+                                                    <span>12 April, 2023</span>
+                                                </div>
+                                                <h3 class="tp-sidebar-blog-title">
+                                                    <a href="blog-details.html">Freelancer Days 2023, What’s new?</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- latest post end -->
+
+                            <!-- categories start -->
+                            <div class="tp-sidebar-widget widget_categories mb-35">
+                                <h3 class="tp-sidebar-widget-title">Categories</h3>
+                                <div class="tp-sidebar-widget-content">
+                                    <ul>
+                                        <li><a href="blog-grid.html">Farming <span>(12)</span></a></li>
+                                        <li><a href="blog-grid.html">Crisp Bread & Cake <span>(6)</span></a></li>
+                                        <li><a href="blog-grid.html">Milk & Meat <span>(2)</span></a></li>
+                                        <li><a href="blog-grid.html">Organic Fruits <span>(8)</span></a></li>
+                                        <li><a href="blog-grid.html">Sea Foods <span>(0)</span></a></li>
+                                        <li><a href="blog-grid.html">Vegetable <span>(3)</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- categories end -->
+
+                            <!-- tag cloud start -->
+                            <div class="tp-sidebar-widget mb-35">
+                                <h3 class="tp-sidebar-widget-title">Popular Tags</h3>
+                                <div class="tp-sidebar-widget-content tagcloud">
+                                    <a href="#">Summer</a>
+                                    <a href="#">Vintage</a>
+                                    <a href="#">Sunglasses</a>
+                                    <a href="#">Organic Food</a>
+                                    <a href="#">Lifesttyle</a>
+                                    <a href="#">Nature</a>
+                                </div>
+                            </div>
+                            <!-- tag cloud end -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- blog grid area end -->
+
+    </main>
+@endsection
