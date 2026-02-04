@@ -17,8 +17,15 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+    protected $table = 'nguoi_dungs';
     protected $fillable = [
-        'name',
+        'ho_ten',
+        'ten_dang_nhap',
+        'so_dien_thoai',
+        'anh_dai_dien',
+        'dia_chi',
+        'trang_thai',
+        'vai_tro_id',
         'email',
         'password',
     ];

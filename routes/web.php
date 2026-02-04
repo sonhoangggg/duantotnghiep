@@ -112,8 +112,10 @@ Route::prefix('admin')->name('admin.')->group(function(){
         return  view('admin.dashboard.index');
     });
 
-    Route::get('layout',function(){
-        return view('layouts.admin');
+
+    // Trang mặc mặc định để viết nội dung
+    Route::get('default',function(){
+        return view('admin.default.index');
     });
 
 });
