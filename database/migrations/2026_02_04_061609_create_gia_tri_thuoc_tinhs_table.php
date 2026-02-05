@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('gia_tri_thuoc_tinhs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('thuoc_tinh_id')->constrained('thuoc_tinhs');
-            $table->string('gia_tri');
+            $table->string('ten_hien_thi',50);
+            $table->string('gia_tri')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -12,12 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('chi_tiet_gio_hangs', function (Blueprint $table) {
-            $table->foreignId('gio_hang_id')->constrained('gio_hangs');
-            $table->foreignId('san_pham_id')->constrained('san_phams');
-            $table->unsignedBigInteger('bien_the_id')->default(0);
+            $table->id();
+
+            $table->foreignId('gio_hang_id')->constrained('gio_hangs')->cascadeOnDelete();
+            $table->foreignId('san_pham_id')->constrained('san_phams')->cascadeOnDelete();
+            $table->foreignId('bien_the_id')->nullable()->constrained('bien_the_san_phams')->nullOnDelete();
+
             $table->integer('so_luong');
-            $table->primary(['gio_hang_id','san_pham_id','bien_the_id']);
             $table->timestamps();
+
+            $table->unique(
+                ['gio_hang_id', 'san_pham_id', 'bien_the_id'],
+            );
         });
     }
 
