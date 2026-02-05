@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class VaiTro extends Model
+class ThongSo extends Model
 {
-    protected $table = 'vai_tros';
+    protected $table = 'thong_sos';
     protected $fillable = [
-        'ten'
+        'ten',
+        'don_vi'
     ];
 }
