@@ -37,7 +37,16 @@ vd: view/admin/products/index.balde.php
 
 
         <div>
-            {{-- Nội dung nhét vào đây --}}
+            <div class="card">
+                <div class="card-header">
+                    {{-- <h4 class="card-title"></h4> --}}
+                </div>
+                <div class="card-body">
+
+                    {{-- Nội dung nhét vào đây --}}
+
+                </div>
+            </div>
         </div>
 
 
