@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\GiaTriThuocTinhController;
+use App\Http\Controllers\Admin\SanPhamController;
+use App\Http\Controllers\Admin\ThuocTinhController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -118,4 +121,26 @@ Route::prefix('admin')->name('admin.')->group(function(){
         return view('admin.default.index');
     });
 
+    // Route Thuộc tính
+    Route::prefix('thuoc-tinh')->name('thuoc-tinh.')->group(function(){
+        Route::get('/',[ThuocTinhController::class,'index'])->name('/');
+        Route::get('them',[ThuocTinhController::class,'create'])->name('them');
+        Route::post('luu',[ThuocTinhController::class,'add'])->name('luu');
+        Route::get('sua/{id}',[ThuocTinhController::class,'edit'])->name('sua');
+        Route::post('cap-nhap/{id}',[ThuocTinhController::class,'update'])->name('cap-nhap');
+        Route::post('xoa/{id}',[ThuocTinhController::class,'delete'])->name('xoa');
+
+        Route::prefix('gia-tri')->name('gia-tri.')->group(function(){
+                Route::get('cau-hinh/{id}',[GiaTriThuocTinhController::class,'index'])->name('cau-hinh');
+                Route::post('them/{id}',[GiaTriThuocTinhController::class,'store'])->name('them');
+        });
+    });
+
+
+    Route::prefix('san-pham')->name('san-pham.')->group(function(){
+
+        Route::get('/',[SanPhamController::class,'index'])->name('/');
+        Route::get('them',[SanPhamController::class,'create'])->name('them');
+
+    });
 });
