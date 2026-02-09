@@ -5,7 +5,8 @@ use App\Http\Controllers\Admin\SanPhamController;
 use App\Http\Controllers\Admin\ThuocTinhController;
 use App\Http\Controllers\TinyUploadContrller;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\DanhMucController;
+use App\Http\Controllers\Admin\ThuongHieuController;
 
 // Route Client
 
@@ -148,5 +149,36 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('them-bien-the/{slug}', [SanPhamController::class, 'themBienThe'])->name('them-bien-the');
         Route::post('luu-bien-the/{slug}', [SanPhamController::class, 'luuBienThe'])->name('luu-bien-the');
         Route::get('chi-tiet/{slug}', [SanPhamController::class, 'show'])->name('chi-tiet');
+    });
+
+    //danh muc 
+     Route::prefix('danh-muc')->name('danh-muc.')->group(function () {
+        Route::get('/', [DanhMucController::class, 'index'])->name('index');
+        Route::get('them', [DanhMucController::class, 'create'])->name('create');
+        Route::post('them', [DanhMucController::class, 'store'])->name('store');
+
+        Route::get('sua/{id}', [DanhMucController::class, 'edit'])->name('edit');
+   Route::put('sua/{id}', [DanhMucController::class, 'update'])->name('update');
+        Route::post('xoa/{id}', [DanhMucController::class, 'destroy'])->name('destroy');
+
+        Route::get('thung-rac', [DanhMucController::class, 'trash'])->name('trash');
+        Route::post('khoi-phuc/{id}', [DanhMucController::class, 'restore'])->name('restore');
+        Route::post('xoa-vinh-vien/{id}', [DanhMucController::class, 'forceDelete'])->name('forceDelete');
+    });
+
+    // ================= THƯƠNG HIỆU =================
+    Route::prefix('thuong-hieu')->name('thuong-hieu.')->group(function () {
+        Route::get('/', [ThuongHieuController::class, 'index'])->name('index');
+        Route::get('them', [ThuongHieuController::class, 'create'])->name('create');
+        Route::post('them', [ThuongHieuController::class, 'store'])->name('store');
+
+        Route::get('sua/{id}', [ThuongHieuController::class, 'edit'])->name('edit');
+        Route::post('sua/{id}', [ThuongHieuController::class, 'update'])->name('update');
+
+        Route::post('xoa/{id}', [ThuongHieuController::class, 'destroy'])->name('destroy');
+
+        Route::get('thung-rac', [ThuongHieuController::class, 'trash'])->name('trash');
+        Route::post('khoi-phuc/{id}', [ThuongHieuController::class, 'restore'])->name('restore');
+        Route::post('xoa-vinh-vien/{id}', [ThuongHieuController::class, 'forceDelete'])->name('forceDelete');
     });
 });
