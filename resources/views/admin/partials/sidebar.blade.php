@@ -34,6 +34,52 @@
                     <span> Dashboard </span>
                 </a>
             </li>
+ 
+            {{-- Danh mục --}}
+          <li class="side-nav-item">
+    <a data-bs-toggle="collapse" href="#danhMuc" class="side-nav-link">
+        <i class="ri-folder-line"></i>
+        <span> Danh mục </span>
+        <span class="menu-arrow"></span>
+    </a>
+    <div class="collapse" id="danhMuc">
+        <ul class="side-nav-second-level">
+            <li>
+                <a href="{{ route('admin.danh-muc.index') }}">Danh sách</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.danh-muc.create') }}">Thêm</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.danh-muc.trash') }}">Thùng rác</a>
+            </li>
+        </ul>
+    </div>
+</li>
+
+
+
+           {{-- Thương hiệu --}}
+<li class="side-nav-item">
+    <a data-bs-toggle="collapse" href="#thuongHieu" class="side-nav-link">
+        <i class="ri-store-2-line"></i>
+        <span> Thương hiệu </span>
+        <span class="menu-arrow"></span>
+    </a>
+    <div class="collapse" id="thuongHieu">
+        <ul class="side-nav-second-level">
+            <li>
+                <a href="{{ route('admin.thuong-hieu.index') }}">Danh sách</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.thuong-hieu.create') }}">Thêm</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.thuong-hieu.trash') }}">Thùng rác</a>
+            </li>
+        </ul>
+    </div>
+</li>
 
 
             <li class="side-nav-item">
