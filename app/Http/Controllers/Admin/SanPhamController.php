@@ -83,7 +83,7 @@ class SanPhamController extends Controller
             'mo_ta_chi_tiet' => $request->mo_ta,
             'trang_thai' => $request->sp_hien_thi ? 'hien' : 'an',
             'noi_bat' => $noi_bat,
-            'nguoi_tao' => 1,
+            'nguoi_tao' => 3,
         ]);
         if (isset($request->danh_muc)) {
             $sanPham->danhMucs()->attach($request->danh_muc);
