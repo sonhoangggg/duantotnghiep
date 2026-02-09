@@ -25,4 +25,19 @@ class SanPham extends Model
         'da_ban',
         'nguoi_tao'
     ];
+    public function danhMucs(){
+        return $this->belongsToMany(DanhMuc::class,'san_pham_danh_mucs','san_pham_id', 'danh_muc_id');
+    }
+    public function thuongHieu(){
+        return $this->belongsTo(ThuongHieu::class,'thuong_hieu_id');
+    }
+    public function anhSanPhams(){
+        return $this->hasMany(AnhSanPham::class,'san_pham_id');
+    }
+    public function bienThes(){
+        return $this->hasMany(BienTheSanPham::class,'san_pham_id');
+    }
+    public function thongSos(){
+        return $this->belongsToMany(ThongSo::class,'san_pham_thong_sos','san_pham_id','thong_so_id');
+    }
 }

@@ -10,4 +10,8 @@ class AnhSanPham extends Model
     protected $fillable = [
         'san_pham_id',	'duong_dan',
     ];
+    public function sanPham()
+    {
+        return $this->belongsTo(SanPham::class, 'san_pham_id');
+    }
 }

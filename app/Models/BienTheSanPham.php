@@ -17,4 +17,16 @@ class BienTheSanPham extends Model
         'trang_thai',
         'da_ban',
     ];
+    public function sanPham()
+    {
+        return $this->belongsTo(SanPham::class, 'san_pham_id');
+    }
+    public function bienTheThuocTinhs()
+    {
+        return $this->belongsToMany(GiaTriThuocTinh::class, 'bien_the_thuoc_tinhs', 'bien_the_id', 'gia_tri_id');
+    }
+    public function thongSoBienThe()
+    {
+        return $this->belongsToMany(BienTheThongSo::class, 'bien_the_thong_sos', 'bien_the_id', 'thong_so_id');
+    }
 }

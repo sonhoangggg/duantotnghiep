@@ -14,4 +14,9 @@ class DanhMuc extends Model
         'mo_ta',
         'parent_id',
     ];
+
+    public function sanPhams(){
+        return $this->belongsToMany(SanPham::class,'san_pham_danh_mucs');
+    }
+
 }
