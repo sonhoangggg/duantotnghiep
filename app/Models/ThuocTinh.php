@@ -17,4 +17,8 @@ class ThuocTinh extends Model
     public function giaTri(){
         return $this->hasMany(GiaTriThuocTinh::class,'thuoc_tinh_id');
     }
+    public function bienTheSanPham(): HasMany
+    {
+        return $this->hasMany(BienTheSanPham::class, 'thuoc_tinh_id');
+    }
 }

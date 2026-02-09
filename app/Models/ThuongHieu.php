@@ -13,4 +13,7 @@ class ThuongHieu extends Model
         'logo',
         'mo_ta',
     ];
+    public function sanPhams(){
+        return $this->hasMany(SanPham::class,'thuong_hieu_id');
+    }
 }
