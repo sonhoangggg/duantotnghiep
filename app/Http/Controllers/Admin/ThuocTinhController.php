@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ThuocTinh;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
+use SweetAlert2\Laravel\Swal;
 
 class ThuocTinhController extends Controller
 {
@@ -13,9 +14,11 @@ class ThuocTinhController extends Controller
     public function index()
     {
         $thuocTinhs = ThuocTinh::with('giaTri')->get();
+        // dd($thuocTinhs);
         return view('admin.thuoc_tinh.index')->with([
             'thuocTinhs' => $thuocTinhs,
         ]);
+
     }
     public function create()
     {
@@ -35,15 +38,17 @@ class ThuocTinhController extends Controller
             'ten' => $request->ten,
             'kieu' => $request->kieu
         ]);
-        return redirect()->route('admin.thuoc-tinh./')->with([
-            'success' => 'Thêm thành công '
+        Swal::success([
+            'title' => 'Thêm thành công!',
+            'text' => 'Thuộc tính đã được thêm thành công.',
         ]);
+        return redirect()->route('admin.thuoc-tinh./');
     }
 
     public function edit($id)
     {
 
-        $thuocTinh = ThuocTinh::find($id);
+        $thuocTinh = ThuocTinh::findOrFail($id);
         return view('admin.thuoc_tinh.edit')->with([
             'thuocTinh' => $thuocTinh
         ]);
@@ -62,15 +67,20 @@ class ThuocTinhController extends Controller
             'ten'  => $request->ten,
             'kieu' => $request->kieu
         ]);
-        return redirect()->route('admin.thuoc-tinh./')->with([
-            'success' => 'Cập nhập thành công '
+        Swal::success([
+            'title' => 'Cập nhập thành công!',
+            'text' => 'Thuộc tính đã được cập nhập thành công.',
         ]);
+        return redirect()->route('admin.thuoc-tinh./');
     }
-    public function delete($id){
-        $thuocTinh  = ThuocTinh::find($id);
+    public function delete($id)
+    {
+        $thuocTinh  = ThuocTinh::findOrFail($id);
         $thuocTinh->delete();
-        return redirect()->route('admin.thuoc-tinh./')->with([
-            'success' => 'Cập nhập thành công '
+        Swal::success([
+            'title' => 'Xóa thành công!',
+            'text' => 'Thuộc tính đã được xóa thành công.',
         ]);
+        return redirect()->route('admin.thuoc-tinh./');
     }
 }

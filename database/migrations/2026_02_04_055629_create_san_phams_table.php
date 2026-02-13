@@ -19,8 +19,8 @@ return new class extends Migration
             $table->decimal('gia_goc',15,0)->nullable();
             $table->decimal('gia_ban',15,0)->nullable();
             $table->integer('so_luong')->nullable();
-            $table->string('mo_ta_ngan')->nullable();
-            $table->text('mo_ta_chi_tiet')->nullable();
+            $table->longText('mo_ta_ngan')->nullable();
+            $table->longText('mo_ta_chi_tiet')->nullable();
             $table->string('anh_chinh');
             $table->enum('trang_thai',['an','hien'])->default('an');
             $table->enum('loai',['don','bien_the'])->default('don');
