@@ -17,23 +17,23 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         $this->call([
-            DanhMucBaiVietSeeder::class,
+            // DanhMucBaiVietSeeder::class,
             VaiTroSeeder::class,
             NguoiDungSeeder::class,
-            BaiVietSeeder::class,
-            BinhLuanBaiVietSeeder::class,
+            // BaiVietSeeder::class,
+            // BinhLuanBaiVietSeeder::class,
             DanhMucSeeder::class,
             ThuongHieuSeeder::class,
-            SanPhamSeeder::class,
-            SanPhamDanhMucSeeder::class,
-            BienTheSanPhamSeeder::class,
-            ThuocTinhSeeder::class,
-            GiaTriThuocTinhSeeder::class,
-            BienTheThuocTinhSeeder::class,
+            // SanPhamSeeder::class,
+            // SanPhamDanhMucSeeder::class,
+            // BienTheSanPhamSeeder::class,
+            // ThuocTinhSeeder::class,
+            // GiaTriThuocTinhSeeder::class,
+            // BienTheThuocTinhSeeder::class,
             ThongSoSeeder::class,
-            SanPhamThongSoSeeder::class,
-            BienTheThongSoSeeder::class,
-            GioHangSoSeeder::class,
+            // SanPhamThongSoSeeder::class,
+            // BienTheThongSoSeeder::class,
+            // GioHangSoSeeder::class,
         ]);
 
     }

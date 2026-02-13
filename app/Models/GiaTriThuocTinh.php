@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class GiaTriThuocTinh extends Model
 {
+    use SoftDeletes;
     protected $table = 'gia_tri_thuoc_tinhs';
     protected $fillable = [
         'thuoc_tinh_id',
@@ -15,4 +17,5 @@ class GiaTriThuocTinh extends Model
     public function thuocTinh(){
         return $this->belongsTo(ThuocTinh::class,'thuoc_tinh_id');
     }
+
 }

@@ -106,20 +106,21 @@ vd: view/admin/products/index.balde.php
                                                     disabled></td>
                                         @elseif ($thuocTinh->kieu === 'anh')
                                             <td class=" align-middle">
-                                                <img src="{{ $value->gia_tri }}" class="img-thumbnail" width="80"
+                                                <img src="{{ Storage::url($value->gia_tri) }}" class="img-thumbnail" width="80"
                                                     alt="">
                                             </td>
                                         @elseif ($thuocTinh->kieu === 'chuoi')
                                             <td></td>
                                         @endif
+
                                         <td class="pe-4 text-star">
                                             <div class="btn-group gap-4">
-                                                <a href="#">
-                                                    <span class="  ri ri-pencil-fill fs-3"></span></a>
+                                                <a href="{{route('admin.thuoc-tinh.gia-tri.sua',$value->id)}}">
+                                                    <span class="ri ri-pencil-fill fs-3"></span></a>
 
 
                                                 <form method="post"
-                                                    action="#">
+                                                    action="{{ route('admin.thuoc-tinh.gia-tri.xoa', $value->id) }}">
                                                     @csrf
                                                     <button type="submit" onclick="return confirm('Bạn chắc muốn xóa chứ')"
                                                         class="btn btn-link p-0 border-0">

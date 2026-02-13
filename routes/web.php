@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BienTheSanPhamController;
 use App\Http\Controllers\Admin\GiaTriThuocTinhController;
 use App\Http\Controllers\Admin\SanPhamController;
 use App\Http\Controllers\Admin\ThuocTinhController;
@@ -136,19 +137,42 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::prefix('gia-tri')->name('gia-tri.')->group(function () {
             Route::get('cau-hinh/{id}', [GiaTriThuocTinhController::class, 'index'])->name('cau-hinh');
             Route::post('them/{id}', [GiaTriThuocTinhController::class, 'store'])->name('them');
+            Route::get('sua/{id}', [GiaTriThuocTinhController::class, 'edit'])->name('sua');
+            Route::post('cap-nhap/{id}', [GiaTriThuocTinhController::class, 'update'])->name('cap-nhap');
+            Route::post('xoa/{id}', [GiaTriThuocTinhController::class, 'destroy'])->name('xoa');
         });
     });
 
-
+    // Route Sản phẩm
     Route::prefix('san-pham')->name('san-pham.')->group(function () {
 
         Route::get('/', [SanPhamController::class, 'index'])->name('/');
         Route::get('them', [SanPhamController::class, 'create'])->name('them');
         Route::post('tao', [SanPhamController::class, 'store'])->name('tao');
-        Route::get('quan-ly-bien-the/{slug}', [SanPhamController::class, 'dsBienThe'])->name('quan-ly-bien-the');
-        Route::get('them-bien-the/{slug}', [SanPhamController::class, 'themBienThe'])->name('them-bien-the');
-        Route::post('luu-bien-the/{slug}', [SanPhamController::class, 'luuBienThe'])->name('luu-bien-the');
+        Route::get('sua/{slug}',[SanPhamController::class,'edit'])->name('sua');
+        Route::post('cap-nhap/{slug}',[SanPhamController::class,'update'])->name('cap-nhap');
+        Route::post('xoa/{slug}', [SanPhamController::class, 'delete'])->name('xoa');
         Route::get('chi-tiet/{slug}', [SanPhamController::class, 'show'])->name('chi-tiet');
+
+        // Route Biến thể sản phẩm
+        Route::prefix('bien-the')->name('bien-the.')->group(function () {
+            Route::get('/{slug}', [BienTheSanPhamController::class, 'dsBienThe'])->name('danh-sach');
+            Route::get('them/{slug}', [BienTheSanPhamController::class, 'themBienThe'])->name('them');
+            Route::post('luu/{slug}', [BienTheSanPhamController::class, 'luuBienThe'])->name('luu');
+            Route::get('sua/{id}', [BienTheSanPhamController::class, 'suaBienThe'])->name('sua');
+            Route::post('cap-nhap/{id}', [BienTheSanPhamController::class, 'capNhapBienThe'])->name('cap-nhap');
+            Route::post('xoa/{id}',[BienTheSanPhamController::class,'xoaBienThe'])->name('xoa');
+        });
+
+        // Route Thuộc tính sản phẩm
+        Route::get('them-thuoc-tinh-cho-san-pham/{slug}', [SanPhamController::class, 'themThuocTinhChoSanPham'])->name('them-thuoc-tinh-cho-san-pham');
+        Route::post('luu-thuoc-tinh-san-pham/{slug}', [SanPhamController::class, 'luuThuocTinhSanPham'])->name('luu-thuoc-tinh-san-pham');
+        Route::get('sua-thuoc-tinh-san-pham/{slug}/{id}', [SanPhamController::class, 'suaThuocTinhSanPham'])->name('sua-thuoc-tinh-san-pham');
+        Route::post('cap-nhap-thuoc-tinh-san-pham/{slug}', [SanPhamController::class, 'capNhapThuocTinhSanPham'])->name('cap-nhap-thuoc-tinh-san-pham');
+        Route::post('xoa-thuoc-tinh-ssan-pham/{slug}/{id}', [SanPhamController::class, 'xoaThuocTinhSanPham'])->name('xoa-thuoc-tinh-ssan-pham');
+
+
+
     });
 
     //danh muc 

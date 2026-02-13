@@ -35,39 +35,45 @@ vd: view/admin/products/index.balde.php
 
 
         <div>
-            <form action="{{ route('admin.san-pham.luu-bien-the', $sanPham->slug) }}" method="post"
+            <form action="{{ route('admin.san-pham.bien-the.luu', $sanPham->slug) }}" method="POST"
                 enctype="multipart/form-data">
+                @csrf
                 <div class="card">
                     <div class="card-header">
                         <h4 class="header-title">Thuộc tính sản phẩm</h4>
-                    </div>
-                    <div class="card-body">
-                        <select name="thuoc_tinh[]" class="select2 form-control select2-multiple thuoc_tinh" multiple
-                            data-placeholder="--Chọn thuộc tính--">
-                            @foreach ($thuocTinhs as $thuocTinh)
-                                <option value="{{ $thuocTinh->id }}">{{ $thuocTinh->ten }}</option>
-                            @endforeach
-                        </select>
-                        @error('thuoc_tinh')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                        <div id="gia-tri-wrapper">
-                            @foreach ($thuocTinhs as $thuocTinh)
-                                <div class="mt-3 gia-tri-item d-none" data-id="{{ $thuocTinh->id }}">
-                                    <label>{{ $thuocTinh->ten }}</label>
-                                    <select name="gia_tri[{{ $thuocTinh->id }}]" class="form-control">
-                                        <option value="">--Chọn giá trị--</option>
-                                        @foreach ($thuocTinh->giaTri as $giaTri)
-                                            <option value="{{ $giaTri->id }}">{{ $giaTri->ten_hien_thi }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            @endforeach
-                        </div>
 
                     </div>
+                    <div class="card-body">
+
+                        @if ($thuoc_tinhs)
+                            @foreach ($thuoc_tinhs as $ten => $id)
+                                <label class="form-label">{{ $ten }}</label>
+
+                                <select class="form-control" name="gia_tri_thuoc_tinh[]">
+                                    <option value="">--Chọn--</option>
+
+                                    @foreach ($gia_tri_thuoc_tinh[$id] ?? [] as $giaTriId => $tenGiaTri)
+                                        <option value="{{ $giaTriId }} ">{{ $tenGiaTri }}</option>
+                                    @endforeach
+
+                                </select>
+                            @endforeach
+                        @endif
+
+                        @error('gia_tri_thuoc_tinh.*')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                        @if ($errors->has('to_hop_gia_tri'))
+                            <div class="text-danger">
+                                {{ $errors->first('to_hop_gia_tri') }}
+                            </div>
+                        @endif
+
+
+                    </div>
+
                 </div>
-                @csrf
+
                 <div class="row">
                     <div class="col-12">
                         <div class="card  ">
@@ -246,33 +252,7 @@ vd: view/admin/products/index.balde.php
             uploadText.classList.remove('d-none');
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            $('.thuoc_tinh').select2();
 
-            $('.thuoc_tinh').on('change', function() {
-                let selectedIds = $(this).val() || [];
-
-                // Ẩn + disable hết
-                $('.gia-tri-item').each(function() {
-                    $(this)
-                        .addClass('d-none')
-                        .find('select')
-                        .prop('disabled', true)
-                        .val(null)
-                        .trigger('change');
-                });
-
-                // Hiện + enable cái được chọn
-                selectedIds.forEach(id => {
-                    $('.gia-tri-item[data-id="' + id + '"]')
-                        .removeClass('d-none')
-                        .find('select')
-                        .prop('disabled', false);
-                });
-            });
-        });
-    </script>
     <script>
         $(document).ready(function() {
             $('.thong_so').select2();

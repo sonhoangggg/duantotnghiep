@@ -291,6 +291,7 @@ vd: view/admin/products/index.balde.php
             images_upload_url: '/admin/tiny/upload',
             images_upload_credentials: true,
             /* Chọn ảnh từ máy */
+            relative_urls: false,
             image_title: true,
             automatic_uploads: true,
             file_picker_types: 'image',

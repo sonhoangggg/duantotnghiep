@@ -65,7 +65,9 @@ vd: view/admin/products/index.balde.php
                                         @forelse ($sanPhams as $key => $sanPham)
                                             <tr>
                                                 <th class="p-0" scope="row">{{ $key + 1 }}</th>
-                                                <td class="p-0"><a href="{{ route('admin.san-pham.chi-tiet', $sanPham->slug) }}" class="text-secondary">{{ $sanPham->ten }}</a></td>
+                                                <td class="p-0"><a
+                                                        href="{{ route('admin.san-pham.chi-tiet', $sanPham->slug) }}"
+                                                        class="text-secondary">{{ $sanPham->ten }}</a></td>
                                                 <td class="p-0">{{ $sanPham->sku }}</td>
                                                 <td class="p-0">
                                                     @if ($sanPham->loai === 'bien_the')
@@ -84,7 +86,7 @@ vd: view/admin/products/index.balde.php
                                                         @endif
                                                     @endif
                                                 </td>
-                                                <td class="p-0"><img src="{{ $sanPham->anh_chinh }}" alt="Thumbnail"
+                                                <td class="p-0"><img src="{{ Storage::url($sanPham->anh_chinh) }}" alt="Thumbnail"
                                                         width="50">
                                                 </td>
                                                 <td class="p-0">
@@ -102,11 +104,12 @@ vd: view/admin/products/index.balde.php
                                                 </td>
                                                 <td class="fs-6 p-0">
                                                     <div class="btn-group gap-2 ">
-                                                        <a href="#">
+                                                        <a href="{{ route('admin.san-pham.sua', $sanPham->slug) }}">
                                                             <span class="  ri ri-pencil-fill fs-3"></span></a>
 
 
-                                                        <form method="post" action="#">
+                                                        <form method="post"
+                                                            action="{{ route('admin.san-pham.xoa', $sanPham->slug) }}">
                                                             @csrf
                                                             <button type="submit"
                                                                 onclick="return confirm('Bạn chắc muốn xóa chứ')"
@@ -117,7 +120,7 @@ vd: view/admin/products/index.balde.php
 
                                                     </div><br>
                                                     <a
-                                                        href="{{ route('admin.san-pham.quan-ly-bien-the', $sanPham->slug) }}">
+                                                        href="{{ route('admin.san-pham.bien-the.danh-sach', $sanPham->slug) }}">
                                                         @if ($sanPham->loai === 'bien_the')
                                                             Quản lý biến thể
                                                         @else
@@ -158,5 +161,6 @@ vd: view/admin/products/index.balde.php
 
 
 @push('js')
+
     {{-- Js viết ở đây nha --}}
 @endpush
